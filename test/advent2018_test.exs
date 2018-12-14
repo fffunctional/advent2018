@@ -17,9 +17,16 @@ defmodule Advent2018Test do
     "ababab"
   ]
 
-  test "day2 part1" do
-    # assert test_input2() |> Advent2018.checksum == 12
-  end
+  def test_input2b, do:
+  [
+    "abcde",
+    "fghij",
+    "klmno",
+    "pqrst",
+    "fguij",
+    "axcye",
+    "wvxyz"
+   ]
 
   test "letter_counts" do
     assert Advent2018.letter_counts("abcdef") ==
@@ -44,5 +51,10 @@ defmodule Advent2018Test do
 
   test "checksum of test input" do
     assert Advent2018.checksum(test_input2()) == 12
+  end
+
+  test "differ_by_one_character" do
+    assert Advent2018.differ_by_one_char(test_input2b()) ==
+      ["fghij", "fguij"]
   end
 end

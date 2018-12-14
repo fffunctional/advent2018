@@ -41,6 +41,12 @@ defmodule Advent2018 do
     count_containing_n_of_letter(input, 3)
   end
 
+  def differ_by_one_char(input) do
+    Toolbox.combination(2, input)
+      |> Enum.filter(fn {a, b} -> // to do
+      end)
+  end
+
   def d2p1 do
     Toolbox.input(2) |> Toolbox.array |> checksum
   end
